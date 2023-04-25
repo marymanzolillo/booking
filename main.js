@@ -7,13 +7,13 @@ $(document).ready(function() {
         title: 'Event 1',
         start: '2023-05-01',
         end: '2023-05-02',
-        url: 'https://example.com/event1'
+        url: './MixedMedia.html'
       },
       {
         title: 'Event 2',
         start: '2023-05-15',
         end: '2023-05-16',
-        url: 'https://example.com/event2'
+        url: './OpenStudio.html'
       }
     ],
     header: {
