@@ -34,16 +34,18 @@ if (registerForm) {
 
     const email = registerForm['register-email'].value;
     const password = registerForm['register-password'].value;
+    const registerStatus = document.getElementById('register-status');
 
     try {
       await register(email, password);
-      alert('Registration successful!');
+      registerStatus.innerHTML = '<p class="text-success">Registration successful!</p>';
       // Redirect to another page or update the UI as needed
     } catch (error) {
-      alert('Registration failed: ' + error.message);
+      registerStatus.innerHTML = '<p class="text-danger">Registration failed: ' + error.message + '</p>';
     }
   });
 }
+
 
 // Get the sign-in form and handle its submit event
 const signInForm = document.getElementById('sign-in-form');
@@ -53,13 +55,15 @@ if (signInForm) {
 
     const email = signInForm['sign-in-email'].value;
     const password = signInForm['sign-in-password'].value;
+    const signInStatus = document.getElementById('sign-in-status');
 
     try {
       await signIn(email, password);
-      alert('Sign in successful!');
+      signInStatus.innerHTML = '<p class="text-success">Sign in successful!</p>';
       // Redirect to another page or update the UI as needed
     } catch (error) {
-      alert('Sign in failed: ' + error.message);
+      signInStatus.innerHTML = '<p class="text-danger">Sign in failed: ' + error.message + '</p>';
     }
   });
 }
+
