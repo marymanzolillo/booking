@@ -38,6 +38,7 @@ if (registerForm) {
 
     try {
       await register(email, password);
+      console.log('Registration attempt'); // Add this line
       registerStatus.innerHTML = '<p class="text-success">Registration successful!</p>';
       // Redirect to another page or update the UI as needed
     } catch (error) {
@@ -59,6 +60,7 @@ if (signInForm) {
 
     try {
       await signIn(email, password);
+      console.log('Sign-in attempt'); // Add this line
       signInStatus.innerHTML = '<p class="text-success">Sign in successful!</p>';
       // Redirect to another page or update the UI as needed
     } catch (error) {
