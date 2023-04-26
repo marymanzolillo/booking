@@ -26,6 +26,7 @@ auth.onAuthStateChanged(user => {
   }
 });
 
+
 // Get the registration form and handle its submit event
 const registerForm = document.getElementById('register-form');
 if (registerForm) {
@@ -36,16 +37,20 @@ if (registerForm) {
     const password = registerForm['register-password'].value;
     const registerStatus = document.getElementById('register-status');
 
+    console.log('Trying to register with email:', email);
+
     try {
       await register(email, password);
-      console.log('Registration attempt'); // Add this line
       registerStatus.innerHTML = '<p class="text-success">Registration successful!</p>';
+      console.log('Registration successful');
       // Redirect to another page or update the UI as needed
     } catch (error) {
       registerStatus.innerHTML = '<p class="text-danger">Registration failed: ' + error.message + '</p>';
+      console.error('Registration failed:', error);
     }
   });
 }
+
 
 
 // Get the sign-in form and handle its submit event
