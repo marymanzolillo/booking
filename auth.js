@@ -1,4 +1,21 @@
-import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js';
+// Import the Firebase module
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js";
+
+// Your Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBdL0p-wvapZOdOjdL0PnnBYumHrOcak7k",
+  authDomain: "booking-880e4.firebaseapp.com",
+  projectId: "booking-880e4",
+  storageBucket: "booking-880e4.appspot.com",
+  messagingSenderId: "565644278296",
+  appId: "1:565644278296:web:40ab2ada7558fd8b5ea16d",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
 
 const auth = firebase.auth();
 
